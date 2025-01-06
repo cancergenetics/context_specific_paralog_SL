@@ -9,7 +9,9 @@ The repository includes:
 - Training of the Random Forest classifier
 - Visualization of the performance of individual features and the classifier
 
-## Preprocessing of Input Datasets
+## Data Processing Notebooks
+
+### Preprocessing of input datasets
 
 All the input data were processed in these notebooks
 
@@ -21,7 +23,7 @@ All the input data were processed in these notebooks
 | preprocess_chymera.ipynb       | Combine preprocessed datasets from individual cell lines for further feature calculation.    |
 | preprocess_thompson.ipynb      | Combine preprocessed datasets from individual cell lines for further feature calculation.    |
 
-## Calculation and Mapping of Features
+### Calculation and mapping of features
 
 All the features calculated and mapped using the notebooks below
 
@@ -31,7 +33,7 @@ All the features calculated and mapped using the notebooks below
 | calculate_ppi.ipynb               | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
 | calculate_go_terms.ipynb          | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
 
-## Training of the Random Forest Classifier
+### Training of the context-specific RF classifier
 
 | Notebook                     | Description                                                 |
 |:-----------------------------|:------------------------------------------------------------|
