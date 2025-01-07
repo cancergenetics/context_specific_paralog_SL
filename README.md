@@ -44,8 +44,8 @@ All the features calculated and mapped using the notebooks below
 
 | Notebook                                    | Figures        | Description           |
 |:--------------------------------------------|:---------------|:----------------------|
-|1_proteomic_replicate_correlation_analysis   | Figure 1       | Visualize the performance of individual features |
-|2_compare_replicate-cor_with_mRNA-protein-   | Figure 2       | Visualize the performance of individual features |
+|fig1_genomics_feature_analysis.ipynb         | Figure 1       | Visualize the performance of individual features |
+|fig2_network_feature_analysis.ipynb          | Figure 2       | Visualize the performance of individual features |
 |3_robust_rank_aggregation                    | Figure 3       | Visualize the performance metrics of the context-specific classifier (e.g., ROC, PR curves) |
 |4_aggregate_ranks_comparison                 | Figure 4       | Compare the performance of  |
 
