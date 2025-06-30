@@ -164,5 +164,8 @@ cython_debug/
 # Ignore everything in input
 input/*
 
-# But keep any .gitkeep in input and subfolders
+# But do NOT ignore subfolders
+!input/**/
+
+# And do NOT ignore .gitkeep files
 !input/**/.gitkeep
