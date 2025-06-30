@@ -1,0 +1,5 @@
+# Ignore everything in PPI
+input/PPI/*
+
+# Do not ignore .gitkeep in PPI
+!input/PPI/.gitkeep

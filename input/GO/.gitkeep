@@ -1,0 +1,5 @@
+# Ignore everything in GO
+input/GO/*
+
+# Do not ignore .gitkeep in GO
+!input/GO/.gitkeep

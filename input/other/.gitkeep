@@ -1,0 +1,5 @@
+# Ignore everything in other
+input/other/*
+
+# Do not ignore .gitkeep in other
+!input/other/.gitkeep

@@ -1,0 +1,5 @@
+# Ignore everything in GEMINI
+input/GEMINI/*
+
+# Do not ignore .gitkeep in GEMINI
+!input/GEMINI/.gitkeep

@@ -1,0 +1,5 @@
+# Ignore everything in LFC
+input/LFC/*
+
+# Do not ignore .gitkeep in LFC
+!input/LFC/.gitkeep

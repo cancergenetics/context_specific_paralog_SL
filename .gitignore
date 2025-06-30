@@ -162,7 +162,7 @@ cython_debug/
 #.idea/
 
 # Ignore everything in input
-input/*
+input/**
 
 # But do NOT ignore subfolders
 !input/**/

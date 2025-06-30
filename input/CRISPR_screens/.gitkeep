@@ -1,0 +1,5 @@
+# Ignore everything in CRISPR_screens
+input/CRISPR_screens/*
+
+# Do not ignore .gitkeep in CRISPR_screens
+!input/CRISPR_screens/.gitkeep

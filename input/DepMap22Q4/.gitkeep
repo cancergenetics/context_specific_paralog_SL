@@ -1,0 +1,5 @@
+# Ignore everything in DepMap22Q4
+input/DepMap22Q4/*
+
+# Do not ignore .gitkeep in DepMap22Q4
+!input/DepMap22Q4/.gitkeep
