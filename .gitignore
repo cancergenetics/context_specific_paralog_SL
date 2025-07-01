@@ -169,3 +169,12 @@ input/**
 
 # And do NOT ignore .gitkeep files
 !input/**/.gitkeep
+
+# Ignore everything in output
+output/**
+
+# But do NOT ignore subfolders
+!output/**/
+
+# And do NOT ignore .gitkeep files
+!output/**/.gitkeep
