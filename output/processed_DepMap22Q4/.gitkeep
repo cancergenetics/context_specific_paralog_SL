@@ -1,0 +1,5 @@
+# Ignore everything in processed_DepMap22Q4
+output/processed_DepMap22Q4/*
+
+# Do not ignore .gitkeep in processed_DepMap22Q4
+!output/processed_DepMap22Q4/.gitkeep

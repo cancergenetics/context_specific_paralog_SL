@@ -1,0 +1,5 @@
+# Ignore everything in processed_CRISPR_screens
+output/processed_CRISPR_screens/*
+
+# Do not ignore .gitkeep in processed_CRISPR_screens
+!output/processed_CRISPR_screens/.gitkeep
