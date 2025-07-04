@@ -1,0 +1,5 @@
+# Ignore everything in ranked_essentiality
+output/ranked_essentiality/*
+
+# Do not ignore .gitkeep in ranked_essentiality
+!output/ranked_essentiality/.gitkeep
