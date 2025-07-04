@@ -1,7 +1,7 @@
-# Predicting context-specific synthetic lethality between paralogs in cancer #
+# A predicted cancer dependency map for paralog pairs #
 
 This repository contains the codebase and Jupyter notebooks for the research paper titled:
-**"Predicting context-specific synthetic lethality between paralogs in cancer"**, currently available in 
+**"A predicted cancer dependency map for paralog pairs"**, currently available in XXX
 
 The repository includes:
 - Preprocessing of input datasets 
@@ -17,43 +17,49 @@ All the input data were processed in these notebooks
 
 | Notebook                       | Description                                                                                  |
 |:-------------------------------|:---------------------------------------------------------------------------------------------|
-| preprocess_ito.ipynb           | Process gene pairs screened by Ito et al.|
-| preprocess_klingbeil.ipynb     | Process gene pairs screened by Klingbeil et al. |  
-| preprocess_parrish.ipynb       | Process gene pairs screened by Parrish et al. |
-| preprocess_dede.ipynb          | Process gene pairs screened by Dede et al. |
-| preprocess_chymera.ipynb       | Process gene pairs screened by Gonatopoulos-Pournatzis et al. |
-| preprocess_thompson.ipynb      | Process gene pairs screened by Thompson et al. |
+| preprocess_ito.ipynb           | Process LFC and FDR datasets in the CRISPR screen by Ito et al.|
+| preprocess_klingbeil.ipynb     | Process LFC and FDR datasets in the CRISPR screen by Klingbeil et al. |  
 
-### Calculation and mapping of features
+### Feature Calculation and Mapping
 
 All the features calculated and mapped using the notebooks below
 
-| Notebook                          | Description                                                                 |
-|:----------------------------------|:----------------------------------------------------------------------------|
-| map_depmap_data.ipynb             | Map calculated features to the desired format for downstream analysis.      |
-| map_depmap_data.ipynb             | Map calculated features to the desired format for downstream analysis.      |
-| map_depmap_data.ipynb             | Map calculated features to the desired format for downstream analysis.      |
-| map_depmap_data.ipynb             | Map calculated features to the desired format for downstream analysis.      |
-| map_depmap_data.ipynb             | Map calculated features to the desired format for downstream analysis.      |
-| map_ranked_essentiality.ipynb     | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
-| map_ppi_data.ipynb                | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
-| map_go_data.ipynb                 | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
-| map_sequence_identity.ipynb       | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
-| map_gemini_score.ipynb            | Compute features (e.g., gene expression, mutation status) for Cell Line 1. |
+| Notebook                                                 | Description                                                                 |
+|:---------------------------------------------------------|:----------------------------------------------------------------------------|
+| 00_preprocess_DepMap_22Q4.ipynb                          | Preprocess the transcriptomics, gene effect, etc files from DepMap22Q4 release|
+| 02_feature_calculation/01_ranked_essentiality.ipynb      | Compute ranked gene essentiality feature     |
+| 02_feature_calculation/02a_IdentifySharedInteractors_BioGRID.ipynb  | Calculate shared protein interactors of the paralog pairs (BioGRID)    |
+| 02_feature_calculation/02b_ParalogPPIEssentiality_BioGRID.ipynb  | Calculate the weighted average essentiality of PPI (BioGRID)      |
+| 02_feature_calculation/03a_IdentifySharedInteractors.ipynb        | Calculate shared protein interactors of the paralog pairs (STRING)       |
+| 02_feature_calculation/03b_ParalogPPIEssentiality.ipynb     | Calculate the weighted average essentiality of PPI (STRING)  |
+| 02_feature_calculation/03c_ParalogPPIExpression.ipynb     | Calculate the weighted average expression of PPI (STRING)  |
+| 02_feature_calculation/04_GO_expression.ipynb             | Calculate the GO for gene expression |
+| 02_feature_calculation/05_GO_ranked_essentiality.ipynb     | Calculate the GO for gene essentiality |
+
+| Notebook                              | Description                                                                 |
+|:--------------------------------------|:----------------------------------------------------------------------------|
+| 03_feature_annotation/01_annotate_DepMap.ipynb             | Map preprocessed DepMap related features to the desired format for downstream analysis. |
+| 03_feature_annotation/02_annotate_networkfeatures.ipynb          | Map calculated network features to the desired format for downstream analysis.      |
+| 03_feature_annotation/03_annotate_ranked_essentiality.ipynb | Map ranked and normalized gene essentiality features to the desired format for downstream analysis.|
+| 03_feature_annotation/04_annotate_scores.ipynb  | Map all features and prediction score from General Classifier in the desired format for downstream analysis.|
+| 03_feature_annotation/05_annotate_gemini.ipynb             | Map GEMINI score and label the training and test dataset in the desired format for downstream analysis.      |
+| 04_preprocess_training_dataset.ipynb            | Identify missing values and fill/drop them in the training and test dataset |
 
 ## Data Analysis Notebooks
 
 | Notebook                                    | Figures        | Description           |
 |:--------------------------------------------|:---------------|:----------------------|
-|fig1_genomics_feature_analysis.ipynb         | Figure 1       | Visualize the performance of individual features |
-|fig2_network_feature_analysis.ipynb          | Figure 2       | Visualize the performance of individual features |
-|fig3_train_classifier.ipynb                  | Figure 3       | Visualize the performance metrics of the context-specific classifier (e.g., ROC, PR curves) |
-|fig4_evaluate_classifier.ipynb               | Figure 4       | Visualize the performance of the context-specific classifier on independent datasets |
+|fig1_genomics_feature_analysis.ipynb         | Figure 2       | Visualize the performance of the genomics related individual features |
+|fig2_network_feature_analysis.ipynb          | Figure 3       | Visualize the performance of network based individual features |
+|fig3_cross_validation.ipynb                  | Figure 4       | Run the cross validation for the context-specific classifier |
+|fig3_cross_validation_visuals.ipynb          | Figure 4       | Visualize the performance metrics of the context-specific classifier (e.g., ROC, PR curves) |
+|fig4_evaluate_classifier.ipynb               | Figure 5       | Visualize the performance of the context-specific classifier on independent dataset |
+|fig5_breast_cancer_data.ipynb                | Figure 6       | Visualize the ... |
 
 ### Citation
 
 If you use this code, please cite the paper:  
-**"Predicting context-specific synthetic lethality between paralogs in cancer"**  
+**"A predicted cancer dependency map for paralog pairs"**  
 *(In preparation)*.
 
 ### Data Sources
