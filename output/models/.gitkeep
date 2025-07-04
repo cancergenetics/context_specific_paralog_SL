@@ -1,0 +1,5 @@
+# Ignore everything in models
+output/models/*
+
+# Do not ignore .gitkeep in models
+!output/models/.gitkeep
