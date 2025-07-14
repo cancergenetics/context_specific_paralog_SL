@@ -1,0 +1,5 @@
+# Ignore everything in figures
+figures/*
+
+# Do not ignore .gitkeep in figures
+!figures/.gitkeep
