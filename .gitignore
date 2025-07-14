@@ -178,3 +178,12 @@ output/**
 
 # And do NOT ignore .gitkeep files
 !output/**/.gitkeep
+
+# Ignore everything in figures
+figures/**
+
+# But do NOT ignore subfolders
+!figures/**/
+
+# And do NOT ignore .gitkeep files
+!figures/**/.gitkeep
