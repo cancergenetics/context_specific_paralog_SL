@@ -1,0 +1,5 @@
+# Ignore everything in breast_cancer
+output/breast_cancer/*
+
+# Do not ignore .gitkeep in breast_cancer
+!output/breast_cancer/.gitkeep
