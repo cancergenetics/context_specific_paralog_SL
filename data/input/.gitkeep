@@ -1,0 +1,5 @@
+# Ignore everything in input
+input/*
+
+# Do not ignore .gitkeep in figures
+!input/.gitkeep

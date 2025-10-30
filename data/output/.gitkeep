@@ -1,0 +1,5 @@
+# Ignore everything in output
+output/*
+
+# Do not ignore .gitkeep in output
+!output/.gitkeep

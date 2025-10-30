@@ -162,22 +162,22 @@ cython_debug/
 #.idea/
 
 # Ignore everything in input
-input/**
+data/input/**
 
 # But do NOT ignore subfolders
-!input/**/
+!data/input/**/
 
 # And do NOT ignore .gitkeep files
-!input/**/.gitkeep
+!data/input/**/.gitkeep
 
 # Ignore everything in output
-output/**
+data/output/**
 
 # But do NOT ignore subfolders
-!output/**/
+!data/output/**/
 
 # And do NOT ignore .gitkeep files
-!output/**/.gitkeep
+!data/output/**/.gitkeep
 
 # Ignore everything in figures
 figures/**

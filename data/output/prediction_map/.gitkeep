@@ -1,0 +1,5 @@
+# Ignore everything in prediction_map
+output/prediction_map/*
+
+# Do not ignore .gitkeep in prediction_map
+!output/prediction_map/.gitkeep
