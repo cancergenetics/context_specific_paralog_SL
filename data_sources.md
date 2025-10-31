@@ -8,8 +8,6 @@
 | Gene Ontology (downloaded 11/09/23)           | Martin et al. 2023      | http://ensembl.org/ |
 | HGNC                                          | Seal et al. 2023        | http://www.genenames.org/   |
 | STRING v11.5                                  | Szklarczyk et al. 2021  | https://string-db.org/  |
-| Dede *et al.* screen                          | Dede et al. 2020        | Table S2; https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02173-2 |
-| CHyMErA screen                                | Gonatopoulos-Pournatzis et al. 2020 | Table S8; https://www.nature.com/articles/s41587-020-0437-z |
 | Ito *et al.* screen                           | Ito et al. 2021         | Tables S4, S9; https://www.nature.com/articles/s41588-021-00967-z |
+| Klingbeil *et al.* screen                     | Klingbeil et al. 2024   | Tables S2, S4, S6; https://aacrjournals.org/cancerdiscovery/article/14/12/2471/750134/MARK2-MARK3-Kinases-Are-Catalytic-Codependencies |
 | Parrish *et al.* screen                       | Parrish et al. 2020     | Table S3; https://doi.org/10.1101/2020.12.20.423710 |
-| Thompson *et al.* screen                      | Thompson et al. 2021    | Tables S1, S3, S5; https://www.nature.com/articles/s41467-021-21478-9 |
