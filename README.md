@@ -7,7 +7,7 @@ The repository includes:
 - Preprocessing of input datasets 
 - Calculation and mapping of features
 - Training of the Random Forest classifier
-- Visualization of the performance of individual features and the classifier
+- Visualization of the performance of individual features and the context-specific classifier
 
 ## Data Processing Notebooks
 
@@ -18,7 +18,9 @@ All the input data were processed in these notebooks
 | Notebook                       | Description                                                                                  |
 |:-------------------------------|:---------------------------------------------------------------------------------------------|
 | preprocess_ito.ipynb           | Process LFC and FDR datasets in the CRISPR screen by Ito et al.|
-| preprocess_klingbeil.ipynb     | Process LFC and FDR datasets in the CRISPR screen by Klingbeil et al. |  
+| preprocess_klingbeil.ipynb     | Process LFC and FDR datasets in the CRISPR screen by Klingbeil et al. |
+| preprocess_parrish.ipynb       | Process LFC dataset in the CRISPR screen by Parrish et al. |
+| preprocess_DepMap_22Q4.ipynb   | Process the transcriptomics, gene effect, etc files from DepMap22Q4 release|   
 
 ### Feature Calculation and Mapping
 
@@ -26,7 +28,6 @@ All the features calculated and mapped using the notebooks below
 
 | Notebook                                                 | Description                                                                 |
 |:---------------------------------------------------------|:----------------------------------------------------------------------------|
-| 00_preprocess_DepMap_22Q4.ipynb                          | Preprocess the transcriptomics, gene effect, etc files from DepMap22Q4 release|
 | 02_feature_calculation/01_ranked_essentiality.ipynb      | Compute ranked gene essentiality feature     |
 | 02_feature_calculation/02a_IdentifySharedInteractors_BioGRID.ipynb  | Calculate shared protein interactors of the paralog pairs (BioGRID)    |
 | 02_feature_calculation/02b_ParalogPPIEssentiality_BioGRID.ipynb  | Calculate the weighted average essentiality of PPI (BioGRID)      |
@@ -43,18 +44,23 @@ All the features calculated and mapped using the notebooks below
 | 03_feature_annotation/03_annotate_ranked_essentiality.ipynb | Map ranked and normalized gene essentiality features to the desired format for downstream analysis.|
 | 03_feature_annotation/04_annotate_scores.ipynb  | Map all features and prediction score from General Classifier in the desired format for downstream analysis.|
 | 03_feature_annotation/05_annotate_gemini.ipynb             | Map GEMINI score and label the training and test dataset in the desired format for downstream analysis.      |
-| 04_preprocess_training_dataset.ipynb            | Identify missing values and fill/drop them in the training and test dataset |
+
+### Model Evaluation
+
+| Notebook                              | Description                                                                 |
+|:--------------------------------------|:----------------------------------------------------------------------------|
+| 04_model_evaluation/01_preprocess_training_dataset.ipynb            | Identify missing values and fill/drop them in the training and test dataset |
+| 04_model_evaluation/02_cross_validation.ipynb            | Run the cross-validation of context-specific classifier on training data |
 
 ## Data Analysis Notebooks
 
 | Notebook                                    | Figures        | Description           |
 |:--------------------------------------------|:---------------|:----------------------|
-|fig1_genomics_feature_analysis.ipynb         | Figure 2       | Visualize the performance of the genomics related individual features |
-|fig2_network_feature_analysis.ipynb          | Figure 3       | Visualize the performance of network based individual features |
-|fig3_cross_validation.ipynb                  | Figure 4       | Run the cross validation for the context-specific classifier |
-|fig3_cross_validation_visuals.ipynb          | Figure 4       | Visualize the performance metrics of the context-specific classifier (e.g., ROC, PR curves) |
-|fig4_evaluate_classifier.ipynb               | Figure 5       | Visualize the performance of the context-specific classifier on independent dataset |
-|fig5_breast_cancer_data.ipynb                | Figure 6       | Visualize the ... |
+|fig2_genomics_feature_analysis.ipynb         | Figure 2       | Visualize the predictive performance of the genomics related individual features |
+|fig3_network_feature_analysis.ipynb          | Figure 3       | Visualize the predictive performance of the network based individual features |
+|fig4_cross_validation_visuals.ipynb          | Figure 4       | Visualize ROC and PR curves of the k-fold cross validation |
+|fig5_evaluate_classifier.ipynb               | Figure 5       | Visualize the performance of the context-specific classifier on independent dataset |
+|fig6_breast_cancer_map.ipynb                 | Figure 6       | Visualize the ... |
 
 ### Citation
 
