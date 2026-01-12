@@ -1,17 +1,34 @@
 # A predicted cancer dependency map for paralog pairs #
 
-This repository contains the codebase and Jupyter notebooks for the research paper titled:
+This repository contains the scripts and Jupyter notebooks for the research paper titled:
 **"A predicted cancer dependency map for paralog pairs"**, currently available in XXX
 
 The repository includes:
-- Preprocessing of input datasets 
-- Calculation and mapping of features
-- Training of the Random Forest classifier
-- Visualization of the performance of individual features and the context-specific classifier
+- `notebooks/01_preprocessing/` - Preprocessing of input datasets 
+- `notebooks/02_feature_calculation/` - Compute features
+- `notebooks/03_feature_annotation/`- Map calculated features to training and test dataset
+- `notebooks/04_model_evaluation/` - Training of the context-specific Random Forest classifier
+- `notebooks/05_visualization/` - Visualization of the performance of individual features and the classifier
+- `scripts/` - Python scripts to calculate the prediction scores on cloud platforms
 
-## Data Processing Notebooks
+## Project Structure 
+context_specific_SL_prediction/
+├── notebooks/
+│ ├── 01_preprocessing/
+│ ├── 02_feature_calculation/
+│ ├── 03_feature_annotation/
+│ ├── 04_model_evaluation/
+│ └── 05_visualization/
+├── scripts/
+├── input_files/ ← contains only .md instructions, no data files
+├── .gitignore
+├── requirements.txt
+├── data_sources.md
+└── README.md
 
-### Preprocessing of input datasets
+## Overview of the Notebooks
+
+### Preprocessing of the input datasets
 
 All the input data were processed in these notebooks
 
@@ -20,9 +37,9 @@ All the input data were processed in these notebooks
 | preprocess_ito.ipynb           | Process LFC and FDR datasets in the CRISPR screen by Ito et al.|
 | preprocess_klingbeil.ipynb     | Process LFC and FDR datasets in the CRISPR screen by Klingbeil et al. |
 | preprocess_parrish.ipynb       | Process LFC dataset in the CRISPR screen by Parrish et al. |
-| preprocess_DepMap_22Q4.ipynb   | Process the transcriptomics, gene effect, etc files from DepMap22Q4 release|   
+| preprocess_DepMap_22Q4.ipynb   | Process the transcriptomics, gene effect scores, etc datasets from DepMap22Q4 release|   
 
-### Feature Calculation and Mapping
+### Feature Calculation and Annotation
 
 All the features calculated and mapped using the notebooks below
 
@@ -34,15 +51,15 @@ All the features calculated and mapped using the notebooks below
 | 02_feature_calculation/03a_IdentifySharedInteractors.ipynb        | Calculate shared protein interactors of the paralog pairs (STRING)       |
 | 02_feature_calculation/03b_ParalogPPIEssentiality.ipynb     | Calculate the weighted average essentiality of PPI (STRING)  |
 | 02_feature_calculation/03c_ParalogPPIExpression.ipynb     | Calculate the weighted average expression of PPI (STRING)  |
-| 02_feature_calculation/04_GO_expression.ipynb             | Calculate the GO for gene expression |
-| 02_feature_calculation/05_GO_ranked_essentiality.ipynb     | Calculate the GO for gene essentiality |
+| 02_feature_calculation/04_GO_expression.ipynb             | Calculate the average gene expression for the annotated gene ontology terms|
+| 02_feature_calculation/05_GO_ranked_essentiality.ipynb     | Calculate the average gene essentiality for the annotated gene ontology terms|
 
 | Notebook                              | Description                                                                 |
 |:--------------------------------------|:----------------------------------------------------------------------------|
-| 03_feature_annotation/01_annotate_DepMap.ipynb             | Map preprocessed DepMap related features to the desired format for downstream analysis. |
+| 03_feature_annotation/01_annotate_DepMap.ipynb             | Map preprocessed genomics features to the desired format for downstream analysis. |
 | 03_feature_annotation/02_annotate_networkfeatures.ipynb          | Map calculated network features to the desired format for downstream analysis.      |
 | 03_feature_annotation/03_annotate_ranked_essentiality.ipynb | Map ranked and normalized gene essentiality features to the desired format for downstream analysis.|
-| 03_feature_annotation/04_annotate_scores.ipynb  | Map all features and prediction score from General Classifier in the desired format for downstream analysis.|
+| 03_feature_annotation/04_annotate_scores.ipynb  | Map all features and prediction score from Context-Agnostic Classifier in the desired format for downstream analysis.|
 | 03_feature_annotation/05_annotate_gemini.ipynb             | Map GEMINI score and label the training and test dataset in the desired format for downstream analysis.      |
 
 ### Model Evaluation
@@ -50,7 +67,7 @@ All the features calculated and mapped using the notebooks below
 | Notebook                              | Description                                                                 |
 |:--------------------------------------|:----------------------------------------------------------------------------|
 | 04_model_evaluation/01_preprocess_training_dataset.ipynb            | Identify missing values and fill/drop them in the training and test dataset |
-| 04_model_evaluation/02_cross_validation.ipynb            | Run the cross-validation of context-specific classifier on training data |
+| 04_model_evaluation/02_cross_validation.ipynb            | Run the cross-validation of context-specific random forest classifier on the training data |
 
 ## Data Analysis Notebooks
 
@@ -60,14 +77,17 @@ All the features calculated and mapped using the notebooks below
 |fig3_network_feature_analysis.ipynb          | Figure 3       | Visualize the predictive performance of the network based individual features |
 |fig4_cross_validation_visuals.ipynb          | Figure 4       | Visualize ROC and PR curves of the k-fold cross validation |
 |fig5_evaluate_classifier.ipynb               | Figure 5       | Visualize the performance of the context-specific classifier on independent dataset |
-|fig6_breast_cancer_map.ipynb                 | Figure 6       | Visualize the ... |
+|fig6_breast_cancer_map.ipynb                 | Figure 6       | Visualize the distribution of the prediction scores for selected gene pairs and mann whitney u test |
+
+## Cloud Execution
+
+
+### Data Sources
+
+Visit [data_sources.md](/data_sources.md) to access the input data.
 
 ### Citation
 
 If you use this code, please cite the paper:  
 **"A predicted cancer dependency map for paralog pairs"**  
 *(In preparation)*.
-
-### Data Sources
-
-Visit [data_sources.md](/data_sources.md) to access the input data.
