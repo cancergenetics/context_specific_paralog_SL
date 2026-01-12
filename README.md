@@ -4,31 +4,16 @@ This repository contains the scripts and Jupyter notebooks for the research pape
 **"A predicted cancer dependency map for paralog pairs"**, currently available in XXX
 
 The repository includes:
-- `notebooks/01_preprocessing/` - Preprocessing of input datasets 
-- `notebooks/02_feature_calculation/` - Compute features
+- `notebooks/01_preprocessing/` - Preprocess the input files 
+- `notebooks/02_feature_calculation/` - Compute network based features
 - `notebooks/03_feature_annotation/`- Map calculated features to training and test dataset
-- `notebooks/04_model_evaluation/` - Training of the context-specific Random Forest classifier
+- `notebooks/04_model_evaluation/` - Train of the context-specific Random Forest classifier
 - `notebooks/05_visualization/` - Visualization of the performance of individual features and the classifier
-- `scripts/` - Python scripts to calculate the prediction scores on cloud platforms
-
-## Project Structure 
-context_specific_SL_prediction/
-├── notebooks/
-│ ├── 01_preprocessing/
-│ ├── 02_feature_calculation/
-│ ├── 03_feature_annotation/
-│ ├── 04_model_evaluation/
-│ └── 05_visualization/
-├── scripts/
-├── input_files/ ← contains only .md instructions, no data files
-├── .gitignore
-├── requirements.txt
-├── data_sources.md
-└── README.md
+- `scripts/` - Python scripts to calculate the prediction score
 
 ## Overview of the Notebooks
 
-### Preprocessing of the input datasets
+### Data Preprocessing
 
 All the input data were processed in these notebooks
 
@@ -67,7 +52,7 @@ All the features calculated and mapped using the notebooks below
 | Notebook                              | Description                                                                 |
 |:--------------------------------------|:----------------------------------------------------------------------------|
 | 04_model_evaluation/01_preprocess_training_dataset.ipynb            | Identify missing values and fill/drop them in the training and test dataset |
-| 04_model_evaluation/02_cross_validation.ipynb            | Run the cross-validation of context-specific random forest classifier on the training data |
+| 04_model_evaluation/02_cross_validation.ipynb            | Run the cross-validation of context-specific random forest classifier on the training dataset |
 
 ## Data Analysis Notebooks
 
@@ -75,12 +60,9 @@ All the features calculated and mapped using the notebooks below
 |:--------------------------------------------|:---------------|:----------------------|
 |fig2_genomics_feature_analysis.ipynb         | Figure 2       | Visualize the predictive performance of the genomics related individual features |
 |fig3_network_feature_analysis.ipynb          | Figure 3       | Visualize the predictive performance of the network based individual features |
-|fig4_cross_validation_visuals.ipynb          | Figure 4       | Visualize ROC and PR curves of the k-fold cross validation |
+|fig4_cross_validation_visuals.ipynb          | Figure 4       | Visualize ROC and PR curves of the cross validation |
 |fig5_evaluate_classifier.ipynb               | Figure 5       | Visualize the performance of the context-specific classifier on independent dataset |
-|fig6_breast_cancer_map.ipynb                 | Figure 6       | Visualize the distribution of the prediction scores for selected gene pairs and mann whitney u test |
-
-## Cloud Execution
-
+|fig6_breast_cancer_map.ipynb                 | Figure 6       | Visualize the distribution of the prediction scores for selected gene pairs |
 
 ### Data Sources
 
