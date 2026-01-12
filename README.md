@@ -56,13 +56,13 @@ All the features calculated and mapped using the notebooks below
 
 ### Data Analysis
 
-| Notebook                                      | Figure   | Description                                                                      |
-|:----------------------------------------------|:--------:|:----------------------------------------------------------------------------------|
-| fig2_genomics_feature_analysis.ipynb          | Figure 2 | Visualize the predictive performance of genomics-related individual features     |
-| fig3_network_feature_analysis.ipynb           | Figure 3 | Visualize the predictive performance of network-based individual features        |
-| fig4_cross_validation_visuals.ipynb           | Figure 4 | Visualize ROC and PR curves of the cross-validation                              |
-| fig5_evaluate_classifier.ipynb                | Figure 5 | Visualize the performance of the context-specific classifier on independent data |
-| fig6_breast_cancer_map.ipynb                  | Figure 6 | Visualize the distribution of prediction scores for selected gene pairs          |
+| Notebook                                     | Description                                                                      |
+|:---------------------------------------------|:----------------------------------------------------------------------------------|
+| fig2_genomics_feature_analysis.ipynb         | Visualize the predictive performance of genomics-related individual features (Fig. 2) |
+| fig3_network_feature_analysis.ipynb          | Visualize the predictive performance of network-based individual features (Fig. 3) |
+| fig4_cross_validation_visuals.ipynb          | Visualize ROC and PR curves of the cross-validation (Fig. 4)                       |
+| fig5_evaluate_classifier.ipynb               | Visualize classifier performance on independent data (Fig. 5)                      |
+| fig6_breast_cancer_map.ipynb                 | Visualize prediction score distribution for selected gene pairs (Fig. 6)           |
 
 ### Data Sources
 
