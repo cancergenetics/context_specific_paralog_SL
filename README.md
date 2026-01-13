@@ -64,11 +64,11 @@ All the features calculated and mapped using the notebooks below
 | fig5_evaluate_classifier.ipynb               | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5)  |
 | fig6_breast_cancer_map.ipynb                 | Visualize the distribution of the prediction scores for selected gene pairs (Fig. 6)          |
 
-### Data Sources
+## Data Sources
 
 Visit [data_sources.md](/data_sources.md) to access the input data.
 
-## Requirements
+## Environment
 
 The code was developed and tested using a Conda environment with **Python 3.11**
 
@@ -76,7 +76,7 @@ To recreate the environment:
 ```bash
 conda env create -f environment.yml
 conda activate paralog_sl_env
-
+```
 ### Citation
 
 If you use this code, please cite the paper:  
