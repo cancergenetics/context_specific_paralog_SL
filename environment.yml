@@ -1,0 +1,25 @@
+name: paralog_sl_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - python=3.11
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - natsort
+  - ipykernel
+  - openpyxl
+  - ipywidgets
+  - pandarallel
+  - modin-all
+  - pyarrow
+  - snappy
+  - mplcursors
+  - ipympl
+  - wget
+  - networkx
+  - pingouin
+  - pip

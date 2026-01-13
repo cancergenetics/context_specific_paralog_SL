@@ -3,7 +3,7 @@
 | Resource                                      | Source                  | Link/Info                                                |
 |:----------------------------------------------|:------------------------|:---------------------------------------------------------|
 | Ito *et al.* screen                           | Ito et al. 2021         | Tables S4, S9; https://www.nature.com/articles/s41588-021-00967-z |
-| Klingbeil *et al.* screen                     | Klingbeil et al. 2024   | Tables S2, S4, S6; https://aacrjournals.org/cancerdiscovery/article/14/12/2471/750134/MARK2-MARK3-Kinases-Are-Catalytic-Codependencies |
+| Klingbeil *et al.* screen                     | Klingbeil et al. 2024   | Tables S2, S4, S6; https://doi.org/10.1158/2159-8290.CD-23-1529 |
 | Parrish *et al.* screen                       | Parrish et al. 2020     | Table S3; https://doi.org/10.1101/2020.12.20.423710 |
 | Feature values and predictions for ∼36.6k paralog pairs | De Kegel et al. 2021    | Table S8; https://doi.org/10.1016/j.cels.2021.08.006 |
 | Cancer Dependency Map (DepMap) 22Q4           | Meyers et al. 2017      | https://figshare.com/articles/dataset/DepMap_22Q4_Public/21637199;   https://depmap.org/portal/ |

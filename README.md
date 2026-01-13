@@ -32,12 +32,12 @@ All the features calculated and mapped using the notebooks below
 |:---------------------------------------------------------|:----------------------------------------------------------------------------|
 | 02_feature_calculation/01_ranked_essentiality.ipynb      | Compute ranked gene essentiality feature     |
 | 02_feature_calculation/02a_IdentifySharedInteractors_BioGRID.ipynb  | Calculate shared protein interactors of the paralog pairs (BioGRID)    |
-| 02_feature_calculation/02b_ParalogPPIEssentiality_BioGRID.ipynb  | Calculate the weighted average essentiality of PPI (BioGRID)      |
+| 02_feature_calculation/02b_ParalogPPIEssentiality_BioGRID.ipynb  | Calculate the weighted average essentiality of PPI (BioGRID)              |
 | 02_feature_calculation/03a_IdentifySharedInteractors.ipynb        | Calculate shared protein interactors of the paralog pairs (STRING)       |
-| 02_feature_calculation/03b_ParalogPPIEssentiality.ipynb     | Calculate the weighted average essentiality of PPI (STRING)  |
-| 02_feature_calculation/03c_ParalogPPIExpression.ipynb     | Calculate the weighted average expression of PPI (STRING)  |
-| 02_feature_calculation/04_GO_expression.ipynb             | Calculate the average gene expression for the annotated gene ontology terms|
-| 02_feature_calculation/05_GO_ranked_essentiality.ipynb     | Calculate the average gene essentiality for the annotated gene ontology terms|
+| 02_feature_calculation/03b_ParalogPPIEssentiality.ipynb     | Calculate the weighted average essentiality of PPI (STRING)                    |
+| 02_feature_calculation/03c_ParalogPPIExpression.ipynb     | Calculate the weighted average expression of PPI (STRING)                        |
+| 02_feature_calculation/04_GO_expression.ipynb             | Calculate the average gene expression for the annotated gene ontology terms      |
+| 02_feature_calculation/05_GO_ranked_essentiality.ipynb     | Calculate the average gene essentiality for the annotated gene ontology terms   |
 
 | Notebook                              | Description                                                                 |
 |:--------------------------------------|:----------------------------------------------------------------------------|
@@ -56,11 +56,11 @@ All the features calculated and mapped using the notebooks below
 
 ### Data Analysis
 
-| Notebook                                     | Description                                                                      |
-|:---------------------------------------------|:----------------------------------------------------------------------------------|
-| fig2_genomics_feature_analysis.ipynb         | Visualize the predictive performance of genomics-related individual features (Fig. 2) |
-| fig3_network_feature_analysis.ipynb          | Visualize the predictive performance of network-based individual features (Fig. 3) |
-| fig4_cross_validation_visuals.ipynb          | Visualize ROC and PR curves of the cross-validation (Fig. 4)                       |
+| Notebook                                     | Description                                                                                   |
+|:---------------------------------------------|:----------------------------------------------------------------------------------------------|
+| fig2_genomics_feature_analysis.ipynb         | Visualize the predictive performance of genomics-related individual features (Fig. 2)         |
+| fig3_network_feature_analysis.ipynb          | Visualize the predictive performance of network-based individual features (Fig. 3)            |
+| fig4_cross_validation_visuals.ipynb          | Visualize ROC and PR curves of the cross-validation (Fig. 4)                                  |
 | fig5_evaluate_classifier.ipynb               | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5)  |
 | fig6_breast_cancer_map.ipynb                 | Visualize the distribution of the prediction scores for selected gene pairs (Fig. 6)          |
 
@@ -77,6 +77,7 @@ To recreate the environment:
 conda env create -f environment.yml
 conda activate paralog_sl_env
 ```
+
 ### Citation
 
 If you use this code, please cite the paper:  
