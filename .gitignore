@@ -186,4 +186,4 @@ figures/**
 !figures/**/
 
 # And do NOT ignore .gitkeep files
-!figures/**/.gitkeep
+!figures/**/.gitkeep.DS_Store
