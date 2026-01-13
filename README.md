@@ -6,9 +6,9 @@ This repository contains the scripts and Jupyter notebooks for the research pape
 The repository includes:
 - `notebooks/01_preprocessing/` - Preprocess the input files 
 - `notebooks/02_feature_calculation/` - Compute network based features
-- `notebooks/03_feature_annotation/`- Map calculated features to training and test dataset
-- `notebooks/04_model_evaluation/` - Train of the context-specific Random Forest classifier
-- `notebooks/05_visualization/` - Visualization of the performance of individual features and the classifier
+- `notebooks/03_feature_annotation/`- Map calculated features to training and test datasets
+- `notebooks/04_model_evaluation/` - Train and evaluate the context-specific Random Forest classifier
+- `notebooks/05_visualization/` - Visualize the performance of individual features and the classifier
 - `scripts/` - Python scripts to calculate the prediction score
 
 ## Overview of the Notebooks
@@ -61,12 +61,21 @@ All the features calculated and mapped using the notebooks below
 | fig2_genomics_feature_analysis.ipynb         | Visualize the predictive performance of genomics-related individual features (Fig. 2) |
 | fig3_network_feature_analysis.ipynb          | Visualize the predictive performance of network-based individual features (Fig. 3) |
 | fig4_cross_validation_visuals.ipynb          | Visualize ROC and PR curves of the cross-validation (Fig. 4)                       |
-| fig5_evaluate_classifier.ipynb               | Visualize classifier performance on independent data (Fig. 5)                      |
-| fig6_breast_cancer_map.ipynb                 | Visualize prediction score distribution for selected gene pairs (Fig. 6)           |
+| fig5_evaluate_classifier.ipynb               | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5)  |
+| fig6_breast_cancer_map.ipynb                 | Visualize the distribution of the prediction scores for selected gene pairs (Fig. 6)          |
 
 ### Data Sources
 
 Visit [data_sources.md](/data_sources.md) to access the input data.
+
+## Requirements
+
+The code was developed and tested using a Conda environment with **Python 3.11**
+
+To recreate the environment:
+```bash
+conda env create -f environment.yml
+conda activate paralog_sl_env
 
 ### Citation
 
