@@ -193,6 +193,9 @@ figures/**
 # And do NOT ignore .gitkeep files
 !figures/**/.gitkeep
 
+# Ignore everything in scripts/gridsearch
+scripts/gridsearch/**
+
 # =========================
 # Explicit notebook ignores
 # =========================
