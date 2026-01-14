@@ -41,11 +41,11 @@ All the features calculated and mapped using the notebooks below
 
 | Notebook                              | Description                                                                 |
 |:--------------------------------------|:----------------------------------------------------------------------------|
-| 03_feature_annotation/01_annotate_DepMap.ipynb             | Map preprocessed genomics features to the desired format for downstream analysis. |
-| 03_feature_annotation/02_annotate_networkfeatures.ipynb          | Map calculated network features to the desired format for downstream analysis.      |
-| 03_feature_annotation/03_annotate_ranked_essentiality.ipynb | Map ranked and normalized gene essentiality features to the desired format for downstream analysis.|
-| 03_feature_annotation/04_annotate_scores.ipynb       | Map all features and prediction score from Context-Agnostic Classifier in the desired format for downstream analysis.|
-| 03_feature_annotation/05_annotate_gemini.ipynb             | Map GEMINI score and label the training and test dataset in the desired format for downstream analysis.      |
+| 03_feature_annotation/01_annotate_DepMap.ipynb               | Map preprocessed genomics features to the desired format for downstream analysis. |
+| 03_feature_annotation/02_annotate_networkfeatures.ipynb      | Map calculated network features to the desired format for downstream analysis.      |
+| 03_feature_annotation/03_annotate_ranked_essentiality.ipynb  | Map ranked and normalized gene essentiality features to the desired format for downstream analysis.|
+| 03_feature_annotation/04_annotate_scores.ipynb               | Map all features and prediction score from Context-Agnostic Classifier in the desired format for downstream analysis.|
+| 03_feature_annotation/05_annotate_gemini.ipynb               | Map GEMINI score and label the training and test dataset in the desired format for downstream analysis.|
 
 ### Model Evaluation
 
@@ -54,24 +54,26 @@ All the features calculated and mapped using the notebooks below
 | 04_model_evaluation/01_preprocess_training_dataset.ipynb  | Identify missing values and fill/drop them in the training and test dataset |
 | 04_model_evaluation/02_cross_validation.ipynb             | Run the cross-validation of context-specific random forest classifier on the training dataset |
 
+`scripts/` folder contains the standalone pipeline to annotate paralog pairs and generate prediction scores for the provided data
+
 ### Building breast cancer cell line specific paralog pair dataset
 
-| Notebook                              | Description                                                                 |
-|:--------------------------------------|:----------------------------------------------------------------------------|
-| 05_breast_cancer_prediction_map/01_breast_cancer_data_generation.ipynb        | Expand paralog pairs for breast cancer cell lines and annotate them by key mutations|
-| 05_breast_cancer_prediction_map/02_breast_cancer_data_annotation.ipynb        | Map the breast cancer cell line specific paralog pair dataset with all features |
+| Notebook                                                                 | Description                                                                         |
+|:-------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| 05_breast_cancer_prediction_map/01_breast_cancer_data_generation.ipynb   | Expand paralog pairs for breast cancer cell lines and annotate them by key mutations|
+| 05_breast_cancer_prediction_map/02_breast_cancer_data_annotation.ipynb   | Map the breast cancer cell line specific paralog pair dataset with all features.    |
 
-### Data Analysis
+### Data Visualization
 
-| Notebook                                  | Description                                                                                                 |
-|:------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| fig2_genomics_feature_analysis.ipynb      | Visualize the predictive performance of genomics-related individual features (Fig. 2)                       |
-| fig3_network_feature_analysis.ipynb       | Visualize the predictive performance of network-based individual features (Fig. 3)                          |
-| fig4_cross_validation_visuals.ipynb       | Visualize ROC and PR curves of the cross-validation (Fig. 4, Supp. Fig. 2)                                  |
-| fig5_evaluate_classifier.ipynb            | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5, Supp. Fig. 4)  |
-| fig6_breast_cancer_map.ipynb              | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6)                |
-| sup_fig1_auc_scatter_features.ipynb       | Visualize the consistency of feature performance across independent screens (Supp. Fig. 1)                  |
-| sup_fig3_reduced_cross_validation.ipynb   | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 3)         |
+| Notebook                                | Description                                                                                                 |
+|:----------------------------------------|:------------------------------------------------------------------------------------------------------------|
+| fig2_genomics_feature_analysis.ipynb    | Visualize the predictive performance of genomics-related individual features (Fig. 2)                       |
+| fig3_network_feature_analysis.ipynb     | Visualize the predictive performance of network-based individual features (Fig. 3)                          |
+| fig4_cross_validation_visuals.ipynb     | Visualize ROC and PR curves of the cross-validation (Fig. 4, Supp. Fig. 2)                                  |
+| fig5_evaluate_classifier.ipynb          | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5, Supp. Fig. 4)  |
+| fig6_breast_cancer_map.ipynb            | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6) |
+| sup_fig1_auc_scatter_features.ipynb     | Visualize the consistency of feature performance across independent screens (Supp. Fig. 1)                  |
+| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 3)         |
 
 ## Data Sources
 
