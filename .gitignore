@@ -196,4 +196,9 @@ figures/**
 # =========================
 # Explicit notebook ignores
 # =========================
+notebooks/03_feature_annotation/05_annotate_parrishScore.ipynb
 notebooks/04_model_evaluation/experimental_agreement.ipynb
+notebooks/04_model_evaluation/02_cross_validation_parrishScored.ipynb
+notebooks/06_visualization/fig4_cross_validation_visuals_parrishScored.ipynb
+notebooks/06_visualization/sup_fig4_cross_validation_parrishScored_visuals.ipynb
+notebooks/06_visualization/sup_fig5_evaluate_classifier_parrishScored.ipynb
