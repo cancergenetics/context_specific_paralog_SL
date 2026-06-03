@@ -1,7 +1,7 @@
 # A predicted cancer dependency map for paralog pairs #
 
 This repository contains the scripts and Jupyter notebooks for the research paper titled:
-**"A predicted cancer dependency map for paralog pairs"**, currently available in XXX
+**"A predicted cancer dependency map for paralog pairs"**, currently available as a [preprint](https://doi.org/10.64898/2026.01.19.700065)
 
 The repository includes:
 - `notebooks/01_preprocessing/` - Preprocess the input files from CRISPR screens and DepMap portal
