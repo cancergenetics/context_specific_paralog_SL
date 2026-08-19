@@ -1,7 +1,7 @@
-# Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer #
+# A predicted cancer dependency map for paralog pairs #
 
 This repository contains the scripts and Jupyter notebooks for the research paper titled:
-**"Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer"**, currently available as a [preprint](https://doi.org/10.64898/2026.01.19.700065)
+**"A predicted cancer dependency map for paralog pairs"**, currently available as a [preprint](https://doi.org/10.64898/2026.01.19.700065)
 
 The repository includes:
 - `notebooks/01_preprocessing/` - Preprocess the input files from CRISPR screens and DepMap portal
@@ -77,17 +77,7 @@ These notebooks reproduce all figures reported in the manuscript
 | fig5_evaluate_classifier.ipynb          | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5, Supp. Fig. 4)          |
 | fig6_breast_cancer_map.ipynb            | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6) |
 | sup_fig1_auc_scatter_features.ipynb     | Visualize the consistency of feature performance across independent screens (Supp. Fig. 1)                          |
-| sup_fig2_auc_scatter_features.ipynb     | Visualize the consistency of feature performance across independent screens (Supp. Fig. 2)                          |
 | sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 3)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 4)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 5)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 6)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 7)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 8)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 9)                 |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 10)                |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 11)                |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 12)                |
 
 ## Data Sources
 
@@ -108,5 +98,5 @@ Notebook execution order follows the directory numbering (01_ → 05_).
 ### Citation
 
 If you use this code, please cite the paper:  
-**"Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer"**  
+**"A predicted cancer dependency map for paralog pairs"**  
 *(In preparation)*.
