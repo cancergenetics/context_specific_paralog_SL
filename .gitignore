@@ -184,6 +184,10 @@ data/output/**
 # And do NOT ignore .gitkeep files
 !data/output/**/.gitkeep
 
+# And do NOT ignore compressed model artefacts
+!data/output/models/*.pickle.gz
+!data/output/models_GIMAP/*.pickle.gz
+
 # Ignore everything in figures
 figures/**
 
@@ -209,6 +213,7 @@ notebooks/04_model_evaluation/00_model_evaluation_on_Harle_dataset.ipynb
 notebooks/06_visualization/fig4_cross_validation_visuals_parrishScored.ipynb
 notebooks/06_visualization/sup_fig4_cross_validation_parrishScored_visuals.ipynb
 notebooks/06_visualization/sup_fig5_evaluate_classifier_parrishScored.ipynb
+notebooks/06_visualization/sup_fig3_reduced_cross_validation.ipynb
 notebooks/00_hap1_data_preprocess.ipynb
 notebooks/01_preprocessing/preprocess_DepMap_26Q1.ipynb
 paper.docx
