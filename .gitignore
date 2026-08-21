@@ -205,7 +205,6 @@ scripts/gridsearch/**
 # =========================
 notebooks/03_feature_annotation/05_annotate_parrishScore.ipynb
 notebooks/01_preprocessing/process_in4mer_dataset.ipynb
-notebooks/03_feature_annotation/05_annotate_GIMAP.ipynb
 notebooks/04_model_evaluation/experimental_agreement.ipynb
 notebooks/04_model_evaluation/02_cross_validation_parrishScored.ipynb
 notebooks/04_model_evaluation/00_model_evaluation_on_Billmann_dataset.ipynb
