@@ -203,8 +203,8 @@ scripts/gridsearch/**
 # =========================
 # Explicit notebook ignores
 # =========================
-notebooks/01_preprocessing/preprocess_harle.ipynb
 notebooks/03_feature_annotation/05_annotate_parrishScore.ipynb
+notebooks/01_preprocessing/process_in4mer_dataset.ipynb
 notebooks/03_feature_annotation/05_annotate_GIMAP.ipynb
 notebooks/04_model_evaluation/experimental_agreement.ipynb
 notebooks/04_model_evaluation/02_cross_validation_parrishScored.ipynb
@@ -216,5 +216,9 @@ notebooks/06_visualization/sup_fig5_evaluate_classifier_parrishScored.ipynb
 notebooks/06_visualization/sup_fig3_reduced_cross_validation.ipynb
 notebooks/00_hap1_data_preprocess.ipynb
 notebooks/01_preprocessing/preprocess_DepMap_26Q1.ipynb
+notebooks/03_feature_annotation/01a_annotate_DepMap_26Q1.ipynb
+notebooks/00_paralogs_in_other_studies.ipynb
+notebooks/06_visualization/fig5_evaluate_classifier_no_essentiality.ipynb
+notebooks/06_visualization/sup_fig5_evaluate_classifier_GIMAP.ipynb
 paper.docx
 CLAUDE.md

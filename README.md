@@ -1,14 +1,14 @@
-# A predicted cancer dependency map for paralog pairs #
+# Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer #
 
 This repository contains the scripts and Jupyter notebooks for the research paper titled:
-**"A predicted cancer dependency map for paralog pairs"**, currently available as a [preprint](https://doi.org/10.64898/2026.01.19.700065)
+**"Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer"**, currently available as a [preprint](https://doi.org/10.64898/2026.01.19.700065)
 
 The repository includes:
 - `notebooks/01_preprocessing/` - Preprocess the input files from CRISPR screens and DepMap portal
 - `notebooks/02_feature_calculation/` - Compute network based features for paralog pairs
 - `notebooks/03_feature_annotation/`- Annotate and integrate the calculated features into training and test datasets
 - `notebooks/04_model_evaluation/` - Train and evaluate the context-specific random forest classifier
-- `notebooks/05_visualization/` - Generate all main and supplementary figures reported in the manuscript
+- `notebooks/06_visualization/` - Generate all main and supplementary figures reported in the manuscript
 - `scripts/` - Python scripts to implement the prediction pipeline for annotating paralog pairs and generating prediction scores
 
 ## Overview of the Notebooks
@@ -22,6 +22,8 @@ All the input data were processed in these notebooks
 | preprocess_ito.ipynb           | Processing of LFC and FDR datasets from the CRISPR screen by Ito et al.|
 | preprocess_klingbeil.ipynb     | Processing of LFC and FDR datasets from the CRISPR screen by Klingbeil et al. |
 | preprocess_parrish.ipynb       | Processing of LFC dataset from the CRISPR screen by Parrish et al. |
+| preprocess_harle.ipynb         | Processing of LFC and FDR datasets from the CRISPR screen by Harle et al. | 
+| process_chymera_pairs.ipynb    | Processing of LFC dataset from the CRISPR screen by Gonatopoulos-Pournatzis et al. |
 | preprocess_DepMap_22Q4.ipynb   | Processing of the transcriptomics, gene effect scores, copy number and somatic mutation profiles from the DepMap22Q4 release|   
 
 2. Feature Calculation and Annotation
@@ -38,6 +40,7 @@ All the features calculated and mapped using the notebooks below
 | 02_feature_calculation/03c_ParalogPPIExpression.ipynb               | Calculation of the weighted average expression of PPI (STRING)                          |
 | 02_feature_calculation/04_GO_expression.ipynb                       | Calculation of the average gene expression across annotated gene ontology terms         |
 | 02_feature_calculation/05_GO_ranked_essentiality.ipynb              | Calculation of the average ranked gene essentiality across annotated gene ontology terms|
+| 02_feature_calculation/06_lfc_analysis.R              | R script to calculate the screen-specific LFC threshold used for SL/nonSL labelling |
 
 | Notebook                                                     | Description                                                    |
 |:-------------------------------------------------------------|:---------------------------------------------------------------|
@@ -45,7 +48,8 @@ All the features calculated and mapped using the notebooks below
 | 03_feature_annotation/02_annotate_networkfeatures.ipynb      | Annotation of network features                                 |
 | 03_feature_annotation/03_annotate_ranked_essentiality.ipynb  | Annotation of ranked and normalized gene essentiality features |
 | 03_feature_annotation/04_annotate_scores.ipynb               | Integration of all features and prediction score from Context-Agnostic Classifier |
-| 03_feature_annotation/05_annotate_gemini.ipynb               | Integration of GEMINI score and labeling of the training and test dataset |
+| 03_feature_annotation/05_annotate_gemini.ipynb               | Integration of GEMINI score and labeling of the training and test datasets |
+| 03_feature_annotation/05_annotate_GIMAP.ipynb                | Integration of GIMAP score and labeling of the training and test datasets |
 
 3. Model Evaluation
 
@@ -53,6 +57,7 @@ All the features calculated and mapped using the notebooks below
 |:----------------------------------------------------------|:-------------------------------------------------------------------------------|
 | 04_model_evaluation/01_preprocess_training_dataset.ipynb  | Identification and handling of missing values in the training and test dataset |
 | 04_model_evaluation/02_cross_validation.ipynb             | Cross-validation of context-specific random forest classifier                  |
+| 04_model_evaluation/02_cross_validation_GIMAP.ipynb       | Cross-validation of context-specific random forest classifier                  |
 
 The `scripts/` directory contains a standalone pipeline of the annotation and prediction, generate prediction scores for the provided data
 
@@ -71,13 +76,15 @@ These notebooks reproduce all figures reported in the manuscript
 
 | Notebook                                | Description                                                                                                         |
 |:----------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| fig2_genomics_feature_analysis.ipynb    | Visualize the predictive performance of genomics-related individual features (Fig. 2)                               |
-| fig3_network_feature_analysis.ipynb     | Visualize the predictive performance of network-based individual features (Fig. 3)                                  |
-| fig4_cross_validation_visuals.ipynb     | Visualize ROC and PR curves from cross-validation (Fig. 4, Supp. Fig. 2)                                            |
-| fig5_evaluate_classifier.ipynb          | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5, Supp. Fig. 4)          |
-| fig6_breast_cancer_map.ipynb            | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6) |
-| sup_fig1_auc_scatter_features.ipynb     | Visualize the consistency of feature performance across independent screens (Supp. Fig. 1)                          |
-| sup_fig3_reduced_cross_validation.ipynb | Visualize ROC and PR curves of the cross-validation when the training set is reduced (Supp. Fig. 3)                 |
+| fig2_genomics_feature_analysis.ipynb    | Visualize the predictive performance of genomics-related individual features (Fig. 2)                                  |
+| fig3_network_feature_analysis.ipynb     | Visualize the predictive performance of network-based individual features (Fig. 3)                                        |
+| fig4_cross_validation_visuals.ipynb     | Visualize ROC and PR curves from cross-validation (Fig. 4, Supp. and Fig. 4); Visualize box plots comparing performance across strategies (Supp. Fig. 3); Visualize ROC and PR curves from cross-validation when GIMAP is used as the SL scoring method (Supp. Fig. 11) |
+| fig5_evaluate_classifier.ipynb          | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5); per–cancer-type ROC and PR curves for the Klingbeil et al. screen across PDAC, SCLC, and AML cell lines (Supp. Fig. 8); ROC and PR curves on seen vs. unseen subsets of three independent GEMINI-scored combinatorial screens (Supp. Fig. 9)            |
+| fig6_breast_cancer_map.ipynb            | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6b)   |
+| sup_fig1_bar_plot_expressed_genes.ipynb | Visualize SL% across expression categories (silenced / moderate / high) of paralog pairs (Supp. Fig. 1)              |
+| sup_fig2_6_and_10_auc_scatter_features.ipynb | Visualize the consistency of feature performance across independent CRISPR screens (Supp. Fig. 2); Visualize the correlation between each feature's individual ROC AUC and its mean abs SHAP contribution in the contextualised and full models (Supp. Fig. 6); Visualize the concordance of individual feature predictive power between GEMINI- and GIMAP-scored Ito et al. dataset (Supp. Fig. 10) |
+| sup_fig5_12_shap_feature_importance.ipynb  | Visualize global SHAP summaries via violin plots (Supp. Fig. 5); per-pair local SHAP comparison of HER2+ vs HER2− breast cancer cell lines for selected paralog pairs (Supp. Fig. 12)         |
+| sup_fig7_calibration_curves.ipynb  | Calibration curves of the predicted SL probabilities (Supp. Fig. 7)         |
 
 ## Data Sources
 
@@ -98,5 +105,5 @@ Notebook execution order follows the directory numbering (01_ → 05_).
 ### Citation
 
 If you use this code, please cite the paper:  
-**"A predicted cancer dependency map for paralog pairs"**  
-*(In preparation)*.
+**"Systematic prioritisation of context-specific paralog pair vulnerabilities in cancer"**  
+*(Under Revision)*.
