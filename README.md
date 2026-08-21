@@ -8,8 +8,11 @@ The repository includes:
 - `notebooks/02_feature_calculation/` - Compute network based features for paralog pairs
 - `notebooks/03_feature_annotation/`- Annotate and integrate the calculated features into training and test datasets
 - `notebooks/04_model_evaluation/` - Train and evaluate the context-specific random forest classifier
+- `notebooks/05_breast_cancer_prediction_map/` - Build the breast cancer cell line specific paralog dependency map
 - `notebooks/06_visualization/` - Generate all main and supplementary figures reported in the manuscript
 - `scripts/` - Python scripts to implement the prediction pipeline for annotating paralog pairs and generating prediction scores
+- `data/output/models/` - The random forest classifiers reported in the paper are provided as pickle files (trained on GEMINI-scored labels)
+- `data/output/models_GIMAP/` - The random forest classifiers reported in the paper are provided as pickle files (trained on GIMAP-scored labels)
 
 ## Overview of the Notebooks
 
@@ -40,7 +43,7 @@ All the features calculated and mapped using the notebooks below
 | 02_feature_calculation/03c_ParalogPPIExpression.ipynb               | Calculation of the weighted average expression of PPI (STRING)                          |
 | 02_feature_calculation/04_GO_expression.ipynb                       | Calculation of the average gene expression across annotated gene ontology terms         |
 | 02_feature_calculation/05_GO_ranked_essentiality.ipynb              | Calculation of the average ranked gene essentiality across annotated gene ontology terms|
-| 02_feature_calculation/06_lfc_analysis.R              | R script to calculate the screen-specific LFC threshold used for SL/nonSL labelling |
+| 02_feature_calculation/06_lfc_analysis.R                            | R script to calculate the screen-specific LFC threshold used for SL/nonSL labelling |
 
 | Notebook                                                     | Description                                                    |
 |:-------------------------------------------------------------|:---------------------------------------------------------------|
@@ -56,8 +59,8 @@ All the features calculated and mapped using the notebooks below
 | Notebook                                                  | Description                                                                    |
 |:----------------------------------------------------------|:-------------------------------------------------------------------------------|
 | 04_model_evaluation/01_preprocess_training_dataset.ipynb  | Identification and handling of missing values in the training and test dataset |
-| 04_model_evaluation/02_cross_validation.ipynb             | Cross-validation of context-specific random forest classifier                  |
-| 04_model_evaluation/02_cross_validation_GIMAP.ipynb       | Cross-validation of context-specific random forest classifier                  |
+| 04_model_evaluation/02_cross_validation.ipynb             | Cross-validation of context-specific random forest classifier (trained on GEMINI-scored labels)                 |
+| 04_model_evaluation/02_cross_validation_GIMAP.ipynb       | Cross-validation of context-specific random forest classifier (trained on GIMAP-scored labels)                 |
 
 The `scripts/` directory contains a standalone pipeline of the annotation and prediction, generate prediction scores for the provided data
 
@@ -78,7 +81,7 @@ These notebooks reproduce all figures reported in the manuscript
 |:----------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
 | fig2_genomics_feature_analysis.ipynb    | Visualize the predictive performance of genomics-related individual features (Fig. 2)                                  |
 | fig3_network_feature_analysis.ipynb     | Visualize the predictive performance of network-based individual features (Fig. 3)                                        |
-| fig4_cross_validation_visuals.ipynb     | Visualize ROC and PR curves from cross-validation (Fig. 4, Supp. and Fig. 4); Visualize box plots comparing performance across strategies (Supp. Fig. 3); Visualize ROC and PR curves from cross-validation when GIMAP is used as the SL scoring method (Supp. Fig. 11) |
+| fig4_cross_validation_visuals.ipynb     | Visualize ROC and PR curves from cross-validation (Fig. 4, and Supp. Fig. 4); Visualize box plots comparing performance across strategies (Supp. Fig. 3); Visualize ROC and PR curves from cross-validation when GIMAP is used as the SL scoring method (Supp. Fig. 11) |
 | fig5_evaluate_classifier.ipynb          | Visualize the performance of the context-specific classifier on independent dataset (Fig. 5); per–cancer-type ROC and PR curves for the Klingbeil et al. screen across PDAC, SCLC, and AML cell lines (Supp. Fig. 8); ROC and PR curves on seen vs. unseen subsets of three independent GEMINI-scored combinatorial screens (Supp. Fig. 9)            |
 | fig6_breast_cancer_map.ipynb            | Visualize the distribution of the prediction scores for selected gene pairs among breast cancer cell lines (Fig. 6b)   |
 | sup_fig1_bar_plot_expressed_genes.ipynb | Visualize SL% across expression categories (silenced / moderate / high) of paralog pairs (Supp. Fig. 1)              |
